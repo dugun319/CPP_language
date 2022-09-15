@@ -33,7 +33,7 @@ int main(){
     std::cout<<"p->getArea() = "<<p->getArea()<<std::endl;
     std::cout<<"(*p).getArea() = "<<(*p).getArea()<<std::endl;
 
-    Circle circleArray[3];
+    Circle circleArray[4];
     
     circleArray[0].setRadius(10); 
     circleArray[1].setRadius(20);
@@ -57,8 +57,15 @@ int main(){
         std::cout<<"p1 + "<<i<<" =\t\t\t"<<(*p1++).getArea()<<std::endl;
         std::cout<<"circleArray + "<<i<<")->getArea() =\t"<<(circleArray+i)->getArea()<<std::endl;
         std::cout<<"(p2 + "<<i<<")->getArea =\t\t"<<(p2+i)->getArea()<<std::endl;
-        //std::cout<<"*(p2 + "<<i<<").getArea = "<<(*p2+i).getArea()<<std::endl;
+        //std::cout<<"*(p2 + "<<i<<").getArea = "<<*(p2+i).getArea()<<std::endl;
     }
+
+    int* pInt = new int;
+
+    std::cout<<"pInt = "<<pInt<<std::endl;
+
+    std::cout<<"sizeof(donut) = "<<sizeof(donut)<<std::endl;
+    std::cout<<"sizeof(circleArray) = "<<sizeof(circleArray)<<std::endl;
 
     return 0;
 }
