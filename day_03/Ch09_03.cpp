@@ -62,7 +62,7 @@ protected :
 };
 
 void Line::draw() {
-    std::cout<<"Circle::draw()"<<std::endl;
+    std::cout<<"Line::draw()"<<std::endl;
 }
 
 int main() {
