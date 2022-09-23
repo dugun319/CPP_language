@@ -2,16 +2,17 @@
 #include <string>
 #include <algorithm>
 
-class Ant_number {
+class Ant_number
+{
 private:
     std::string start_number = "1";
     std::string result;
 
 public:
-    void cnt_repeat_count(std::string& setStart_number, std::string& result);
+    void cnt_repeat_count(std::string &setStart_number, std::string &result);
     void setStart_number(int a) { this->start_number = a; }
 };
-
+/*
 void Ant_number::cnt_repeat_count(std::string& setStart_number, std::string& result)
 {
     int cnt_repeat_num[9] = {0,};
@@ -85,4 +86,46 @@ void Ant_number::cnt_repeat_count(std::string& setStart_number, std::string& res
     }
 
     start_number = result;
+}
+*/
+
+int main()
+{
+
+    std::string result;
+    std::string str = "1";
+
+    std::cout<<str<<std::endl;
+
+    int cnt = 0;
+
+    for (int j = 0; j < 10; j++)
+    {
+        result.clear();
+
+        std::string str_comp(str.substr(0, 1));
+
+        for (int i = 0; i < str.length() + 1; i++)
+        {
+
+            std::string str_move(str.substr(i, 1));
+
+            if (str_move != str_comp)
+            {
+                result.append(str_comp);
+                result.append(std::to_string(cnt));
+                str_comp = str_move;
+                cnt = 0;
+            }
+            if (str_move == str_comp)
+            {
+                cnt++;
+            }
+        }
+        
+        std::cout << result << std::endl;
+        str = result;
+
+    }
+
 }
