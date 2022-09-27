@@ -6,7 +6,7 @@ int main()
 {
     // 스트림 객체 생성 및 파일 열기
     ifstream fin;
-    fin.open("c:\\student.txt");
+    fin.open("student.txt");
     if (!fin)
     { // 파일 열기 실패 확인
         cout << "파일을 열 수 없다";
