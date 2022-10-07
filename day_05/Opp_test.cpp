@@ -29,6 +29,7 @@ ostream& operator << (ostream& stream, Point a) { // << 연산자 함수
 */
 
 int main() {
+    /*
 	char tmp[100]; // Point 객체 생성
 	cin.getline(tmp, 100);  // >> 연산자를 호출하여 x 좌표와 y 좌표를 키보드로 읽어 객체 p 완성
 	cout << tmp;
@@ -36,8 +37,10 @@ int main() {
     cout << cin.gcount();
 
     cout<<endl;
+    */
 
-    cout.width(12);
-    cout.fill('%');
-    cout<<"";
+    cout.width(10);
+    cout.precision(4);
+    cout<<setfill('~')<<left<<2./3.;
+    
 }
